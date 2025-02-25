@@ -1,6 +1,6 @@
 # 🧩 console.log-adventures 🧩
 
-# 🎯 JavaScript School Assignments
+## 🎯 JavaScript School Assignments
 
 🚀 A collection of JavaScript assignments from my course. Originally hosted on GitLab, now moved to GitHub.
 
