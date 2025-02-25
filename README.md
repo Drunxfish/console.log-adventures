@@ -15,6 +15,8 @@ Good luck into this maze 💀
 ✅ DOM Manipulation  
 ✅ Event Handling  
 ✅ Asynchronous JavaScript (Promises & Fetch API)  
+✅ AJAX (Asynchronous JavaScript and XML)
+
 
 ## 📜 License
 This project is licensed under the **MIT License**, meaning you can use and modify the code with proper attribution.
