@@ -2,7 +2,8 @@
 
 ## 🎯 JavaScript School Assignments
 
-🚀 A collection of JavaScript assignments and doodles from my course. Originally hosted on GitLab, now moved to GitHub, however I will be adding some stuff ;P
+🚀 A collection of JavaScript assignments from my course and some doodles.
+Originally hosted on GitLab, now moved to GitHub, however I will be adding some stuff ;P
 
 ## 📂 Project Structure
 Good luck into this maze 💀
