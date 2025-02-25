@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box containerblue">
+            <div class="images">
+                <img src="blue.jpg" id="foto" alt="#">
+            </div>
+            <div class="opties">
+                <button id="red">Red</button>
+                <button id="blue">Blue</button>
+                <button id="green">Green</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let foto = $('#foto');
+        let box = $('.box');
+
+        // Very first jQuery animation 
+        $('#red').on('click', (e) => {
+            if (foto.attr('src') !== "red.jpg") {
+                foto.slideUp(900);
+                box.removeClass("containerblue");
+                box.removeClass("containergreen");
+                box.addClass("containerred");
+                setTimeout(() => {
+                    foto.attr("src", "red.jpg").slideDown(900);
+                }, 900);
+            };
+        });
+
+
+        $('#blue').on('click', (e) => {
+            if (foto.attr('src') !== "blue.jpg") {
+                foto.slideUp(900);
+                box.removeClass("containerred");
+                box.removeClass("containergreen");
+                box.addClass("containerblue");
+                setTimeout(() => {
+                    foto.attr("src", "blue.jpg").slideDown(900);
+                }, 900);
+            }
+        })
+
+        $('#green').on('click', (e) => {
+            if (foto.attr('src') !== "green.jpg") {
+                foto.slideUp(900);
+                box.removeClass("containerred");
+                box.removeClass("containerblue");
+                box.addClass("containergreen");
+                setTimeout(() => {
+                    foto.attr("src", "green.jpg").slideDown(900);
+                }, 900);
+            };
+        });
+    </script>
+</body>
+
+</html>

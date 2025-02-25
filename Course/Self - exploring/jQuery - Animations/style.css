@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    transition: 2s ease-in-out;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 60vh;
+    width: 80vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+    border-radius: 5vh;
+    background-color: orange;
+}
+
+.box .images{
+    border-bottom: #333 solid 0.5vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box .images img{
+    width: 100%;
+    height: 40vh;
+    background-color: black;
+}
+.box .opties{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box button{
+    cursor: pointer;
+    width: 20vh;
+    padding: 2vh;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+}
+
+.containerblue{
+    transition: 2s ease-in-out;
+    box-shadow: 25px 25px 500px 150px rgb(79, 79, 230);
+}
+
+.containerred{
+    transition: 2s ease-in-out;
+    box-shadow: 25px 25px 500px 150px red;
+}
+
+.containergreen{
+    transition: 2s ease-in-out;
+    box-shadow: 25px 25px 500px 150px green;
+}
+
