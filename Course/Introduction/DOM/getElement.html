@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tagName</title>
+</head>
+
+<body>
+    <h1 id="titel">tagName</h1>
+    <ul>
+        <li>Eerste</li>
+        <li class="tweede">Tweede</li>
+        <li>Derde</li>
+    </ul>
+
+
+    <script>
+        // haal items met node names van 'li'
+        var itemArray = document.getElementsByTagName('li');
+
+        // opgehaalde elementen in de console weergeven
+        for (var i = 0; i < itemArray.length; i++) {
+            console.log(itemArray[i]);
+        }            
+    </script>
+</body>
+
+</html>

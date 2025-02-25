@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        div {
+            background-color: white;
+            padding: 10vh;
+            font-size: 5vh;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="klok"></div>
+
+    <script>
+
+        // Dynamische klok bijwerken in elke seconde
+        let elkeSeconde = setInterval(() => {
+
+            // Klok object aanmaken
+            let datum = new Date();
+
+            // Formateren
+            let uren = datum.getHours();
+            if (uren < 10) {
+                uren = '0' + uren;
+            };
+
+
+            // Minuten formateren
+            let minuten = datum.getMinutes();
+            if (minuten < 10) {
+                minuten = '0' + minuten;
+            };
+
+            // Seconden formateren
+            let seconden = datum.getSeconds();
+            if (seconden < 10) {
+                seconden = '0' + seconden;
+            };
+
+            // text wijzigen
+            document.querySelector("div#klok").textContent = `${uren}:${minuten}:${seconden}`;
+        },
+            1000); 
+    </script>
+</body>
+
+</html>

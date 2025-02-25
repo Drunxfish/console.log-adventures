@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht-2a</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f1f1f1;
+            overflow: hidden;
+            user-select: none;
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Boo👻</h1>
+
+    <script>
+
+        // lege array defineren //
+        var namen = [];
+
+        // functie aanmaken die naam aanvraagt en opslaat //
+        function vraagVoornaam() {
+            var voornaam = prompt("Wat is uw naam? ");
+            return voornaam;
+        };
+
+        // 6 namen opslaan en weergeven
+        for (var i = 1; i <= 6; i++) {
+
+            // naam uitroepen en data opslaan 
+            var voornaam = vraagVoornaam();
+
+
+            // duplicatie voorkomen
+            if (!namen.includes(voornaam)) {
+
+                // in de array
+                namen.push(voornaam);
+
+            } else {
+                // duplicatie stoppen
+                alert("Dank je wel!");
+                break;
+            }
+
+        };
+        // inhoud in de console loggen
+        console.log(namen);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <style>
+        .gekleurd {
+            background-color: darkslateblue;
+            height: 200px;
+            width: 100%;
+        }
+
+        .container {
+            width: 155px;
+            height: 155px;
+            margin: 10px;
+            padding: 10px;
+            background-color: aliceblue;
+            border: 2px solid grey;
+        }
+
+        .extra {
+            background-color: transparent;
+        }
+
+        .onderstreept {
+            text-decoration: underline;
+        }
+
+        .kleur-1 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: salmon;
+            border: 2px solid grey;
+            border-radius: 0% 50% 50% 50%;
+        }
+
+        .kleur-2 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: darkkhaki;
+            border: 2px solid grey;
+            border-radius: 50% 0% 50% 50%;
+        }
+
+        .kleur-3 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: indigo;
+            border: 2px solid grey;
+            border-radius: 50% 50% 0% 50%;
+        }
+
+        .kleur-4 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: olive;
+            border: 2px solid grey;
+            border-radius: 50% 50% 50% 0%;
+        }
+
+        .onder {
+            z-index: 0;
+        }
+
+        .boven {
+            z-index: 10;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h2>Het belang van de div</h2>
+    <div id="eersteDiv" class="extra">Een stukje tekst...</div>
+    <hr />
+    <h2 id="h2Button">Het belang van een button</h2>
+    <button>Doe</button>
+    <hr />
+    <div id="container" class="extra"></div>
+    <script>
+        // klas toevoegen
+        if (!$("#container").hasClass("container")) {
+            $("#container").addClass("container");
+        };
+        let eersteDiv = $('#eersteDiv');
+
+        // verwijder klas extra en voeg gekleurd toe
+        if (eersteDiv.hasClass("extra")) {
+            eersteDiv.removeClass("extra").addClass("gekleurd");
+        };
+
+
+        // elementen manipulatie
+        $("h2").addClass("onderstreept");
+        $("#h2Button").html("<strong>Een button met een actie</strong>");
+
+
+        // effect
+        $("button").click(() => {
+            $(".gekleurd").fadeToggle(400);
+        });
+
+        //  event verwijderen
+        $("button").off('click');
+
+
+        // per klik event toggelen
+        $("button").on("click", () => {
+            $(".gekleurd").slideToggle(600);
+        });
+
+
+
+        // 4 Pads toevoegen in de container
+        for (let i = 1; i <= 4; i++) {
+            $("#container").append(`<div class="kleur-${i}"></div>`);
+        };
+
+        // Pads container
+        let divs = $('#container div');
+        divs.on("mouseover", (e) => {
+
+            // Haal klas boven weg
+            if (divs.hasClass("boven")) {
+                divs.removeClass("boven");
+            };
+
+            // Zet rest onderaan
+            if (divs.hasClass("onder")) {
+                divs.removeClass("onder");
+            };
+
+            // Voeg klas op target
+            e.target.classList.add("boven");
+        });
+    </script>
+</body>
+
+</html>

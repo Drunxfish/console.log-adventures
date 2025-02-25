@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        .tweede_subtitel {
+            font-weight: bolder;
+            font-style: italic;
+        }
+
+        .blauw {
+            color: cornflowerblue;
+        }
+
+        .rood {
+            color: palevioletred;
+        }
+
+        .achtergrond {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dit is een grote titel</h1>
+
+    <h2>Eerste subtitel</h2>
+    <h2 id="tweede" class="tweede_subtitel">Tweede subtitel</h2>
+
+    <p class="achtergrond">Doggo ipsum aqua doggo sub woofer long water shoob yapper, what a nice floof. Aqua doggo
+        floofs adorable doggo blep, wow very biscit h*ck. Woofer shooberino such treat fluffer, you are doing me a
+        frighten. Pupperino heck you are doing me the shock clouds borkdrive doggorino, shooberino long bois pats. smol
+        you are doing me a frighten. Heckin good boys and girls wow very biscit shoob ruff, maximum borkdrive. Adorable
+        doggo bork snoot porgo, smol I am bekom fat. Corgo heckin good boys and girls heckin angery woofer doggo, sub
+        woofer doggorino. Boof pupper borkdrive very jealous pupper, super chub you are doing me a frighten. Blop snoot
+        you are doing me a frighten heck woofer, very taste wow big ol pupper. Shooberino thicc I am bekom fat lotsa
+        pats big ol pupper pupper super chub, woofer lotsa pats borking doggo long water shoob.</p>
+    <p>Shoob lotsa pats borking doggo you are doing me a frighten, borking doggo big ol pupper. Puggorino blep woofer
+        wow such tempt very taste wow, long doggo pupperino. Borkdrive pats big ol pupper long woofer thicc, maximum
+        borkdrive smol. doggo borking doggo pats. Shibe puggo doing me a frighten long woofer heckin good boys, ur givin
+        me a spook snoot he made many woofs. Smol boofers corgo I am bekom fat, most angery pupper I have ever seen such
+        treat. Wrinkler heckin good boys big ol many pats bork, borkf doing me a frighten boofers. You are doin me a
+        concern ruff most angery pupper I have ever seen yapper, most angery pupper I have ever seen doge. fluffer you
+        are doing me a frighten. I am bekom fat he made many woofs yapper dat tungg tho big ol waggy wags fat boi, long
+        bois pats doing me a frighten doggorino. Very hand that feed shibe shibe you are doing me the shock big ol
+        pupper, blop you are doin me a concern.</p>
+    <p class="achtergrond">Borkf adorable doggo doge many pats stop it fren, length boy floofs very good spot. Heckin
+        good boys woofer extremely cuuuuuute doggorino blop you are doing me the shock, tungg the neighborhood pupper
+        pupperino. Heckin angery woofer he made many woofs maximum borkdrive smol doggo I am bekom fat you are doin me a
+        concern wow very biscit, you are doing me a frighten doge such treat big ol pupper extremely cuuuuuute big ol.
+        wow such tempt shoober stop it fren. Heck shoob puggorino long bois shooberino, maximum borkdrive borkdrive
+        blop. Smol corgo long woofer borkdrive, heckin good boys and girls super chub heck, ur givin me a spook blep.
+        Shoober clouds shooberino sub woofer pupperino, the neighborhood pupper you are doin me a concern shibe fat boi
+        thicc, pupperino what a nice floof bork.</p>
+
+    <img src="https://images.pexels.com/photos/2070485/pexels-photo-2070485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Foto door Oleksandr P op Pexel" />
+
+    <script>
+        // klas toevoegen/ophalen
+        document.querySelector("h1").classList.add("rood");
+        let alleH2 = document.querySelectorAll("h2");
+
+        // klas toevoegen
+        for (let i = 0; i < alleH2.length; i++) {
+            alleH2[i].classList.add("blauw");
+        };
+
+        // klas weghalen
+        document.getElementById("tweede").classList.remove("tweede_subtitel");
+        let paragraaf = document.querySelectorAll("p");
+
+        // klas 'togglen'
+        for (let j = 0; j < paragraaf.length; j++) {
+            paragraaf[j].classList.toggle("achtergrond");
+        };
+    </script>
+</body>
+
+</html>

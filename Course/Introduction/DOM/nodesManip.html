@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 3c</title>
+</head>
+<body>
+    <h1 id = "titel">Opdracht 3c</h1>
+    <h3>subtitel</h3>
+    <h3 class = tweede>laatste h3</h3>
+    <ul>
+        <li>Eerste</li>
+        <li class="tweede">Tweede</li>
+        <li>Derde</li>
+    </ul>
+    <a href = "https://www.w3schools.com/cssref/css_selectors.php">Niet deze!</a>
+    <div>
+        <a href = "https://www.w3schools.com/jsref/met_document_queryselector.asp">querySelector</a>
+    </div>
+
+    <script>
+        // elementen aanpassen
+        document.querySelector("h3.tweede").style.color = "chartreuse";
+        document.querySelector("li.tweede").style.backgroundColor = "black";
+        document.querySelector("li.tweede").style.color = "white";
+        document.querySelector("li.tweede").textContent = "Gelukt!";
+        document.querySelector("div a").style.color = "blueviolet";
+
+    </script>
+</body>
+</html>
