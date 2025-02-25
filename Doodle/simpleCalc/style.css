@@ -1,0 +1,84 @@
+body{
+    background-color: #0a0a0ada;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+}
+*{
+    transition: 0.3s ease-in-out;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.container{
+    background-color:rgb(0, 0, 0);
+    color: white;
+    width: 408px;
+    user-select: none;
+    padding: 3vh;
+    border-radius: 2vh;
+}
+
+#display{
+    text-align: right;
+    height: 91px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 25px;
+    border-bottom: 1pfx solid rebeccapurple;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.button{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: inset 0.1px red;
+
+}
+
+.buttons{
+    border-collapse: collapse;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+#clear{
+    background-color: rgb(192, 123, 123);
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+#equal, #execute{
+    background-color: orangered;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#execute:hover{
+    background-color: #65fab0;
+    color: black;
+}
+
+#equal:hover{
+    background-color: #d0ff4f;
+    color: black;
+}
