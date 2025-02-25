@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast</title>
+    <link rel="stylesheet" href="toast.css">
+</head>
+
+<body>
+    <div class="toastGenerator">
+        <div class="title">
+            <h1>Generate Toast</h1>
+        </div>
+        <div class="wrapper">
+            <textarea cols="30" rows="4" placeholder="Toast message" id="toastMess"></textarea>
+            <select name="icons" id="toastIcon">
+                <option value="" selected disabled>Select Toast Icon</option>
+                <option value="check">✅</option>
+                <option value="cross">❌</option>
+                <option value="information">⚠️</option>
+            </select>
+            <input type="submit" value="Generate" id="generator">
+        </div>
+    </div>
+
+    <div id="toastbox">
+    </div>
+    <script src="./toastFeedback.js" defer></script>
+</body>
+
+</html>
