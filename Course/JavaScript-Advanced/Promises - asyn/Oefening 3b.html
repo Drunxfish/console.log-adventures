@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Lijst</title>
+    <style>
+        .gedaan {
+            text-decoration: line-through;
+        }
+
+        li {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>To-Do Lijst</h1>
+    <input type="text" id="taskName" placeholder="Taaknaam">
+    <input type="text" id="taskDescription" placeholder="Beschrijving">
+    <button id="addTaskButton">Taak toevoegen</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        // Nieuwe taak
+        function addTask() {
+            // Nieuwe promise retourneren
+            return new Promise((resolve) => {
+                // Na 1.5s wordt volgende uitgevoerd
+                setTimeout(() => {
+                    // ul lijst ophalen en input 'waardes' opslaan
+                    let taskList = document.getElementById("taskList");
+                    let taskName = document.getElementById("taskName").value;
+                    let taskDescription = document.getElementById("taskDescription").value;
+
+                    // Nieuwe node
+                    let li = document.createElement("li");
+
+                    // Value toekenen
+                    li.innerHTML = `${taskName}: ${taskDescription} <button onclick="completeTask(this)">Voltooid</button>`;
+
+                    // Onderaan weergeven
+                    taskList.appendChild(li);
+
+                    // Callback
+                    resolve();
+                    // 1,5 seconden wachten en daarna uitvoeren
+                }, 1500);
+            });
+        };
+
+
+
+        // Callback-functie voor het markeren van een taak als voltooid
+        function completeTask(knop) {
+            let item = knop.parentNode;
+            item.classList.add('gedaan');
+            knop.disabled = true;
+        };
+
+        // Eventlistener voor de knop
+        document.getElementById("addTaskButton").addEventListener("click", addTask);
+    </script>
+</body>
+
+</html>

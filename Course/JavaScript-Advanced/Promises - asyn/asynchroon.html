@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async</title>
+</head>
+
+<body>
+    <h1>Vraag en antwoord</h1>
+    <h2 id="q_a"></h2>
+
+    <script>
+        // Antwoord syncen
+        async function toonAntwoord() {
+            // Hier dus de code die 'lang' duurt
+            let deBelofte = new Promise(function (resolve) {
+                setTimeout(function () { resolve("Yes, You !!"); }, 3000);
+            });
+            document.getElementById("q_a").innerHTML = await deBelofte;
+        };
+
+        // Code gaat door, antwoord wordt l8er ingevuld
+        toonAntwoord();
+
+        // Eerst de vraag stellen!
+        document.getElementById("q_a").innerHTML = "Who ... Me?";
+    </script>
+</body>
+
+</html>
