@@ -18,8 +18,5 @@ Good luck into this maze 💀
 ✅ AJAX (Asynchronous JavaScript and XML)
 
 
-## 📜 License
-This project is licensed under the **MIT License**, meaning you can use and modify the code with proper attribution.
-
 ---
 💡 Feel free to explore the assignments and use them as a learning reference! 🚀
