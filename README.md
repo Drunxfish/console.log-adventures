@@ -17,7 +17,7 @@ Good luck into this maze 💀
 ✅ DOM Manipulation  
 ✅ Event Handling  
 ✅ Asynchronous JavaScript (Promises & Fetch API)  
-✅ AJAX (Asynchronous JavaScript and XML)
+//  AJAX (Asynchronous JavaScript and XML) ....
 
 
 ---
