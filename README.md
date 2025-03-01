@@ -5,7 +5,7 @@
 🚀 A collection of JavaScript assignments from my course and some doodles.
 Originally hosted on GitLab, now moved to GitHub, however I will be adding some stuff ;P
 
-📑 Most of the course assignments were designed by Professor Raoul Wilmans-Sangwienwong.
+📑Course assignments (Introduction/Advanced) were designed by Professor Raoul Wilmans-Sangwienwong.
 ```
 ├── Course/
 │   ├── Introduction/
